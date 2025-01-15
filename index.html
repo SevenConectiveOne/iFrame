@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="iframeHolder"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          let src =
+          "https://smartkasa.kwizbot.io/autologin?en&user=admin@evergreens.in.ua&redirect_module=OperatorPanelChats&login_key=5E3mq71cYFL6r5*3";
+    
+          function createFrame() {
+            let frame = document.createElement("iframe");
+            frame.setAttribute("src", src);
+            frame.setAttribute("name", "Kwizbot");
+            frame.setAttribute("id", "frame");
+            frame.frameBorder = 0;
+            frame.width = 100 + "%";
+            frame.height = 700 + "px";
+            document.getElementById("iframeHolder").appendChild(frame);
+          }
+    
+          createFrame();
+        });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
